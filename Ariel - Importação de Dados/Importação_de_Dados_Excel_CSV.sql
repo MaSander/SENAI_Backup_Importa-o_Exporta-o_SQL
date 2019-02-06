@@ -1,3 +1,5 @@
+--Inserção de dados - SQL
+
 bulk insert personagens
 from 'C:\db\Personagens_hroads.csv'
 	with(
@@ -9,6 +11,6 @@ from 'C:\db\Personagens_hroads.csv'
 		DATAFILETYPE = 'Char' -- tipo do arquivo = 'Char'
 	);
 
-select * from personagens -- Lista todos os registros da tabela personagens
+select * from PERSONAGENS -- Lista todos os registros da tabela personagens
 
 truncate table personagens -- Apaga todos os registros da tabela
