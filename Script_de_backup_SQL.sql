@@ -1,6 +1,11 @@
 CREATE DATABASE BACKUP_TESTE_HROADS
 
+USE BACKUP_TESTE_HROADS;
+
 ----------------------------------------------------------------------------------------------------------------------
+drop database BACKUP_TESTE_HROADS
+
+
 
 CREATE TABLE TIPO_HABILIDADE(
 	ID INT IDENTITY PRIMARY KEY
@@ -66,10 +71,13 @@ VALUES (1, 1), (1, 2), (2, 2), (3, 1), (4, 3), (4, 2), (6, 3)
 
 
 
-use BACKUP_TESTE_HROADS;
+USE ;
 
-BACKUP DATABASE BACKUP_TESTE_HROADS
-TO DISK = 'C:\Backup_teste_hroads\BDteste.BAK'
+BACKUP DATABASE BACKUP_TESTE_HROADS -- Seleciona o banco de dados que ira ser feito o backup
+
+TO DISK = 'C:\Backup_teste_hroads\BDteste.BAK' -- Informa o local que ficara armazenado o backup
+
+-- outras opções opcional
 		WITH FORMAT,
 		MEDIANAME = 'SENAI_HROADS_TARDE',
 		NAME = 'Full Backup of SENAI_HROADS_TARDE'
